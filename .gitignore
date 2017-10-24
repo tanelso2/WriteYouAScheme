@@ -1,0 +1,5 @@
+*.o
+*.hi
+simple_parser
+*.dyn_hi
+*.dyn_o
