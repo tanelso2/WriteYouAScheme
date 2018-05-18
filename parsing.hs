@@ -198,8 +198,6 @@ eval (List [Atom "if", pred, trueExp, falseExp]) =
          Bool True -> eval trueExp
          Bool False -> eval falseExp
          notBool -> throwError $ TypeMismatch "bool" notBool
-eval (List [Atom "cond" : conditions]) =
-    do -- TODO: http://www.schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-7.html#%_idx_106
 eval (List (Atom func : args)) = do
                                     evaledArgs <- mapM eval args
                                     apply func evaledArgs
@@ -378,8 +376,6 @@ equal [arg1, arg2] = do
        eqvEquals <- eqv [arg1, arg2]
        return $ Bool $ (primitiveEquals || let (Bool x) = eqvEquals in x)
 equal badArgList = throwError $ NumArgs 2 badArgList
-
-cond :: [LispVal] -> ThrowsError
 
 main :: IO ()
 main = do
