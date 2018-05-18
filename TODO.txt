@@ -1,0 +1,4 @@
+Skipped Exercises:
+    Evaluation Part 2:
+        - 3
+        - 4
