@@ -1,2 +1,2 @@
 #!/bin/bash
-ghc -package parsec -o parser parsing.hs
+ghc -package parsec -o simple_parser parsing.hs
